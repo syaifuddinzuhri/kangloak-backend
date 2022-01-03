@@ -89,7 +89,7 @@ jobs:
         with:
           host: ${{ env.INSTANCE_IP }}
           username: ubuntu
-          key: ${{ secrets.OCI_INSTANCE_KEY }}
+          key: ${{ secrets.OCI_INSTANCE_KEY_1 }}
           source: "docker-compose.yml"
           target: "./"
 
@@ -98,7 +98,7 @@ jobs:
         with:
           host: ${{env.INSTANCE_IP}}
           username: ubuntu
-          key: ${{secrets.OCI_INSTANCE_KEY}}
+          key: ${{secrets.OCI_INSTANCE_KEY_1}}
           script: |
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/kangloak-backend
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/kangloak-backend-web_server
