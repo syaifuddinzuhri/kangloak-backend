@@ -51,7 +51,7 @@ RUN chmod -R 755 /var/www/public
 RUN chown -R www-data:www-data /var/log/supervisor
 
 # Install dependency
-RUN composer install
+RUN composer update
 
 # Copy .env.example to container with rename file .env
 COPY .env.example /var/www/.env
