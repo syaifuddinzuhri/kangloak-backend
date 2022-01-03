@@ -100,8 +100,8 @@ jobs:
           username: ubuntu
           key: ${{secrets.OCI_INSTANCE_KEY_1}}
           script: |
-            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/kangloak-backend
-            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/kangloak-backend-web_server
+            sudo docker pull pythagoras11/kangloak-backend
+            sudo docker pull pythagoras11/kangloak-backend-web_server
             sudo docker-compose up -d
             sudo docker exec app /bin/bash -c "php artisan key:generate"
             sudo docker exec app /bin/bash -c "echo 'DB_CONNECTION=${{ secrets.DB_CONNECTION }}' >> .env"
