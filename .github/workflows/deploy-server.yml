@@ -90,7 +90,7 @@ jobs:
           host: ${{ env.INSTANCE_IP }}
           username: ubuntu
           key: ${{ secrets.OCI_INSTANCE_KEY_1 }}
-          source: "docker-compose.servera.yml"
+          source: "docker-compose.yml"
           target: "./"
 
       - name: "Running Docker Compose"
