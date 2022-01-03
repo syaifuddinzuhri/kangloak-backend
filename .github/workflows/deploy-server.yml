@@ -102,7 +102,7 @@ jobs:
           script: |
             sudo docker pull pythagoras11/kangloak-backend
             sudo docker pull pythagoras11/kangloak-backend-web_server
-            sudo docker-compose -f docker-compose.servera.yml up -d
+            sudo docker-compose up -d
             sudo docker exec app /bin/bash -c "php artisan key:generate"
             sudo docker exec app /bin/bash -c "echo 'DB_CONNECTION=${{ secrets.DB_CONNECTION }}' >> .env"
             sudo docker exec app /bin/bash -c "echo 'DB_HOST=${{ secrets.DB_HOST }}' >> .env"
